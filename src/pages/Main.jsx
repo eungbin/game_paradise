@@ -2,9 +2,10 @@ import React, {  } from 'react';
 import Box from '../components/Box';
 
 export default function Main() {
-    return (
-        <div className='main-container'>
-          <Box />
-        </div>
-    );
+
+  return (
+    <section className='main-container'>
+      <Box name={'box-team'} url={'team'} />
+    </section>
+  );
 }
