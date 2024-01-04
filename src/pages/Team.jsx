@@ -1,10 +1,30 @@
 import React, { useState } from 'react';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
 import './css/Team.css';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 export default function Team() {
   const firstTeamId = ['first1', 'first2', 'first3', 'first4'];
   const secondTeamId = ['second1', 'second2', 'second3', 'second4'];
   const [randomCount, setRandomCount] = useState(0);
+  const [open, setOpen] = useState(false); // modal open/close state
+  const [team_1, setTeam_1] = useState([]);
+  const [team_2, setTeam_2] = useState([]);
+
+  const handleClose = () => { setOpen(false); }
+  const handleOpen = () => { setOpen(true); }
 
   /**
    * 랜덤 팀원 입력창 생성 함수
@@ -57,10 +77,24 @@ export default function Team() {
 
     if(total > 0) { console.log('인원이 10명보다 적습니다!'); return; }
     if(total < 0) { console.log('인원이 10명보다 많습니다!'); return; }
+
+    setTeam_1([...firstTeam]);
+    setTeam_2([...secondTeam]);
+    handleOpen();
   }
 
   return (
     <section className='team-main-container'>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          {team_1}
+        </Box>
+      </Modal>
       <section className='team-inner-container'>
         <div className='team-box first'>
           <span className='box-header'>1팀 고정</span>
