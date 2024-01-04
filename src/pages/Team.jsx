@@ -14,6 +14,45 @@ export default function Team() {
     containerElem.prepend(newInputElem);
   }
 
+  const createTeam = () => {
+    let total = 10;
+    const firstTeam = [];
+    const secondTeam = [];
+
+    for(let i=0; i<firstTeamId.length; i++) {
+      const person = document.getElementById(firstTeamId[i]).value;
+      if(!!person) {
+        firstTeam.push(person);
+        total--;
+      }
+    }
+    for(let i=0; i<secondTeamId.length; i++) {
+      const person = document.getElementById(secondTeamId[i]).value;
+      if(!!person) {
+        secondTeam.push(person);
+        total--;
+      }
+    }
+
+    const randomElems = document.getElementsByClassName('input-container')[2].children;
+
+    for(let i=0; i<randomElems.length-1; i++) {
+      const person = randomElems[i].value;
+      if(!!person) {
+        if(firstTeam.length === 5) { secondTeam.push(person); total--; continue; }
+        if(secondTeam.length === 5) { firstTeam.push(person); total--; continue; }
+        if(firstTeam.length === 5 && secondTeam.length === 5) { console.log("인원이 10명보다 많습니다!"); return; }
+
+        let randomNumber = Math.floor(Math.random()*2);
+        randomNumber === 0 ? firstTeam.push(person) : secondTeam.push(person);
+        total--;
+      }
+    }
+
+    if(total > 0) { console.log('인원이 10명보다 적습니다!'); return; }
+    if(total < 0) { console.log('인원이 10명보다 많습니다!'); return; }
+  }
+
   return (
     <section className='team-main-container'>
       <section className='team-inner-container'>
@@ -41,7 +80,7 @@ export default function Team() {
         </div>
       </section>
       <section className='container-btn'>
-        <div className='btn-action'>팀 짜기</div>
+        <div className='btn-action' onClick={createTeam}>팀 짜기</div>
       </section>
     </section>
   );
