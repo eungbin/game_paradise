@@ -6,6 +6,9 @@ export default function Team() {
   const secondTeamId = ['second1', 'second2', 'second3', 'second4'];
   const [randomCount, setRandomCount] = useState(0);
 
+  /**
+   * 랜덤 팀원 입력창 생성 함수
+   */
   const createRandom = () => {
     const containerElem = document.getElementsByClassName('input-container')[2];
     const newInputElem = document.createElement('input');
@@ -14,6 +17,9 @@ export default function Team() {
     containerElem.prepend(newInputElem);
   }
 
+  /**
+   * 팀 생성 함수
+   */
   const createTeam = () => {
     let total = 10;
     const firstTeam = [];
