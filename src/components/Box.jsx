@@ -11,7 +11,7 @@ export default function Box(props) {
 
   return (
     <div className={props.name} id='box' onClick={goNextPage}>
-      GO TEAM
+      {props.text}
     </div>
   );
 }
