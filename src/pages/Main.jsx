@@ -7,7 +7,7 @@ export default function Main() {
   return (
     <section className='main-container'>
       <Box name={'box-team'} url={'team'} text={'team'} />
-      <Box name={'box-maple'} url={'maple'} text={'maple'} />
+      <Box name={'box-maple-union'} url={'union'} text={'union'} />
     </section>
   );
 }

@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './pages/Main';
 import NotFound from './pages/NotFound';
 import Team from './pages/Team';
-import Maple from './pages/Maple';
+import Union from './pages/Union';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Main />}></Route>
             <Route path='/team' element={<Team />}></Route>
-            <Route path='/maple' element={<Maple />}></Route>
+            <Route path='/union' element={<Union />}></Route>
             <Route path='*' element={<NotFound />}></Route>
           </Routes>
         </header>
