@@ -12,3 +12,33 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
+
+.input-level {
+  padding: 8.5px 14px;
+  width: 100px;
+  height: 23px;
+  border-radius: 5px;
+  border: 1px solid #FFFFFF80;
+  background-color: transparent;
+  color: white;
+  margin-right: 8px;
+}
+
+.btn-action-white {
+  padding: 8.5px 14px;
+  width: 50px;
+  height: 23px;
+  background-color: white;
+  border-radius: 5px;
+  line-height: 1.45em;
+  cursor: pointer;
+  font-weight: bold;
+  color: #191F2B;
+}
+
+div.inner-container-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 16px;
+}
