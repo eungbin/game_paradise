@@ -1,40 +1,20 @@
 import React, {  } from 'react';
+import data from '../data/union.json';
+import code from '../data/code.json';
+import './css/Union.css';
 
 export default function Maple() {
+
   const createBlock = (level, type) => {
-    if(type === 'zero') {
-      if(level >= 250) {
 
-      } else if(level >= 200) {
-
-      } else if(level >= 180) {
-
-      } else if(level >= 160) {
-
-      } else if(level >= 130) {
-
-      } else {
-        return;
-      }
-    } else {
-      if(level >= 250) {
-
-      } else if(level >= 200) {
-
-      } else if(level >= 140) {
-
-      } else if(level >= 100) {
-
-      } else if(level >= 60) {
-
-      } else {
-        return;
-      }
-    }
   }
 
   return (
-    <>
-    </>
+    <section className='union-main-container'>
+      <div className='container-input outer font-size-2'>공격대원 입력</div>
+      <div className='container-board outer font-size-2'>유니온 배치도</div>
+      <div className='container-raider-effect outer font-size-2'>공격대원 효과</div>
+      <div className='container-occupation-effect outer font-size-2'>점령 효과</div>
+    </section>
   );
 }

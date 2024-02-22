@@ -1,0 +1,18 @@
+{
+  "advanture": {
+    "night": {
+      "hero": {
+        "effect": "STAT-01",
+        "rank": [10, 20, 40, 80, 100]
+      },
+      "paladin": {
+        "effect": "",
+        "number": []
+      },
+      "darknight": {
+        "effect": "",
+        "number": []
+      }
+    }
+  }
+}
