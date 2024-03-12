@@ -60,29 +60,29 @@ export default function Union() {
   ]);
   // 공격대원 블록 생성 함수
   const createBlock = (level, type) => {
-
+    
   }
   // 배치도 테두리 적용 함수
-  const createBoard = (binaryNum, style, key) => {
+  const createBoard = (binaryNum, style, key, clickFunc) => {
     const borderThick = '2px solid #FFFFFF';
     const borderNormal = '1px solid #FFFFFF80';
 
-    if(binaryNum === 0) return <td key={key} className={style} style={{borderLeft: borderNormal,borderTop: borderNormal,borderRight: borderNormal,borderBottom: borderNormal}}></td>
-    else if(binaryNum === 1) return <td key={key} className={style} style={{borderLeft: borderNormal,borderTop: borderNormal,borderRight: borderNormal,borderBottom: borderThick}}></td>
-    else if(binaryNum === 2) return <td key={key} className={style} style={{borderLeft: borderNormal,borderTop: borderNormal,borderRight: borderThick,borderBottom: borderNormal}}></td>
-    else if(binaryNum === 3) return <td key={key} className={style} style={{borderLeft: borderNormal,borderTop: borderNormal,borderRight: borderThick,borderBottom: borderThick}}></td>
-    else if(binaryNum === 4) return <td key={key} className={style} style={{borderLeft: borderNormal,borderTop: borderThick,borderRight: borderNormal,borderBottom: borderNormal}}></td>
-    else if(binaryNum === 5) return <td key={key} className={style} style={{borderLeft: borderNormal,borderTop: borderThick,borderRight: borderNormal,borderBottom: borderThick}}></td>
-    else if(binaryNum === 6) return <td key={key} className={style} style={{borderLeft: borderNormal,borderTop: borderThick,borderRight: borderThick,borderBottom: borderNormal}}></td>
-    else if(binaryNum === 7) return <td key={key} className={style} style={{borderLeft: borderNormal,borderTop: borderThick,borderRight: borderThick,borderBottom: borderThick}}></td>
-    else if(binaryNum === 8) return <td key={key} className={style} style={{borderLeft: borderThick,borderTop: borderNormal,borderRight: borderNormal,borderBottom: borderNormal}}></td>
-    else if(binaryNum === 9) return <td key={key} className={style} style={{borderLeft: borderThick,borderTop: borderNormal,borderRight: borderNormal,borderBottom: borderThick}}></td>
-    else if(binaryNum === 10) return <td key={key} className={style} style={{borderLeft: borderThick,borderTop: borderNormal,borderRight: borderThick,borderBottom: borderNormal}}></td>
-    else if(binaryNum === 11) return <td key={key} className={style} style={{borderLeft: borderThick,borderTop: borderNormal,borderRight: borderThick,borderBottom: borderThick}}></td>
-    else if(binaryNum === 12) return <td key={key} className={style} style={{borderLeft: borderThick,borderTop: borderThick,borderRight: borderNormal,borderBottom: borderNormal}}></td>
-    else if(binaryNum === 13) return <td key={key} className={style} style={{borderLeft: borderThick,borderTop: borderThick,borderRight: borderNormal,borderBottom: borderThick}}></td>
-    else if(binaryNum === 14) return <td key={key} className={style} style={{borderLeft: borderThick,borderTop: borderThick,borderRight: borderThick,borderBottom: borderNormal}}></td>
-    else if(binaryNum === 15) return <td key={key} className={style} style={{borderLeft: borderThick,borderTop: borderThick,borderRight: borderThick,borderBottom: borderThick}}></td>
+    if(binaryNum === 0) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderNormal,borderTop: borderNormal,borderRight: borderNormal,borderBottom: borderNormal}}></td>
+    else if(binaryNum === 1) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderNormal,borderTop: borderNormal,borderRight: borderNormal,borderBottom: borderThick}}></td>
+    else if(binaryNum === 2) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderNormal,borderTop: borderNormal,borderRight: borderThick,borderBottom: borderNormal}}></td>
+    else if(binaryNum === 3) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderNormal,borderTop: borderNormal,borderRight: borderThick,borderBottom: borderThick}}></td>
+    else if(binaryNum === 4) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderNormal,borderTop: borderThick,borderRight: borderNormal,borderBottom: borderNormal}}></td>
+    else if(binaryNum === 5) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderNormal,borderTop: borderThick,borderRight: borderNormal,borderBottom: borderThick}}></td>
+    else if(binaryNum === 6) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderNormal,borderTop: borderThick,borderRight: borderThick,borderBottom: borderNormal}}></td>
+    else if(binaryNum === 7) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderNormal,borderTop: borderThick,borderRight: borderThick,borderBottom: borderThick}}></td>
+    else if(binaryNum === 8) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderThick,borderTop: borderNormal,borderRight: borderNormal,borderBottom: borderNormal}}></td>
+    else if(binaryNum === 9) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderThick,borderTop: borderNormal,borderRight: borderNormal,borderBottom: borderThick}}></td>
+    else if(binaryNum === 10) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderThick,borderTop: borderNormal,borderRight: borderThick,borderBottom: borderNormal}}></td>
+    else if(binaryNum === 11) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderThick,borderTop: borderNormal,borderRight: borderThick,borderBottom: borderThick}}></td>
+    else if(binaryNum === 12) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderThick,borderTop: borderThick,borderRight: borderNormal,borderBottom: borderNormal}}></td>
+    else if(binaryNum === 13) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderThick,borderTop: borderThick,borderRight: borderNormal,borderBottom: borderThick}}></td>
+    else if(binaryNum === 14) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderThick,borderTop: borderThick,borderRight: borderThick,borderBottom: borderNormal}}></td>
+    else if(binaryNum === 15) return <td key={key} onClick={clickFunc} className={style} style={{borderLeft: borderThick,borderTop: borderThick,borderRight: borderThick,borderBottom: borderThick}}></td>
   }
   /**
    * Add raider function (raiders state)
@@ -116,6 +116,10 @@ export default function Union() {
    */
   const raiderChange = (e) => {
     setSelectedRaider(e.target.value);
+  }
+
+  const clickBoard = (e) => {
+    e.target.className === 'selected' ? e.target.className = 'none-selected' : e.target.className = 'selected';
   }
 
   return (
@@ -163,7 +167,7 @@ export default function Union() {
           {tableBlock.map((v, idx) => (
             <tr key={idx}>
               {v.map((value, index) => (
-                value ? createBoard(tableBorder[idx][index], 'selected', (index*10+1)) : createBoard(tableBorder[idx][index], 'none-selected', (index*10+1))
+                value ? createBoard(tableBorder[idx][index], 'selected', (index*10+1), clickBoard) : createBoard(tableBorder[idx][index], 'none-selected', (index*10+1), clickBoard)
               ))}
             </tr>
           ))}
